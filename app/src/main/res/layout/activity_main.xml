@@ -9,8 +9,163 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activity.MainActivity">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameText"
+        android:layout_marginTop="36dp"
+        android:layout_gravity="left"
+        android:textSize="18dp"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_alignEnd="@+id/textViewTitle"
+        android:layout_toRightOf="@+id/textViewActivity"
+        android:layout_toEndOf="@+id/textViewActivity" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Personal Information"
+        android:id="@+id/textViewTitle"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MALE"
+        android:id="@+id/radioButtonMale"
+        android:checked="false"
+        android:layout_alignBottom="@+id/textViewGender"
+        android:layout_toRightOf="@+id/textViewGender"
+        android:layout_toEndOf="@+id/textViewGender"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FEMALE"
+        android:id="@+id/radioButtonFemale"
+        android:checked="false"
+        android:layout_alignTop="@+id/radioButtonMale"
+        android:layout_toRightOf="@+id/radioButtonMale"
+        android:layout_toEndOf="@+id/radioButtonMale"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:id="@+id/textViewName"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/nameText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENDER"
+        android:id="@+id/textViewGender"
+        android:textSize="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textViewName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGE"
+        android:id="@+id/textViewAge"
+        android:layout_below="@+id/textViewGender"
+        android:layout_alignLeft="@+id/textViewGender"
+        android:layout_alignStart="@+id/textViewGender"
+        android:layout_marginTop="26dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageText"
+        android:layout_alignRight="@+id/nameText"
+        android:layout_alignEnd="@+id/nameText"
+        android:textSize="18dp"
+        android:layout_above="@+id/textViewWeight"
+        android:layout_toEndOf="@+id/textViewActivity"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_alignStart="@+id/nameText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WEIGHT"
+        android:id="@+id/textViewWeight"
+        android:layout_below="@+id/textViewAge"
+        android:layout_alignLeft="@+id/textViewAge"
+        android:layout_alignStart="@+id/textViewAge"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEIGHT"
+        android:id="@+id/textViewHeight"
+        android:layout_below="@+id/textViewWeight"
+        android:layout_alignLeft="@+id/textViewWeight"
+        android:layout_alignStart="@+id/textViewWeight"
+        android:layout_marginTop="27dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTIVITY"
+        android:id="@+id/textViewActivity"
+        android:layout_below="@+id/textViewHeight"
+        android:layout_alignLeft="@+id/textViewHeight"
+        android:layout_alignStart="@+id/textViewHeight"
+        android:layout_marginTop="26dp"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerActivity"
+        android:layout_alignTop="@+id/textViewActivity"
+        android:layout_alignLeft="@+id/radioButtonMale"
+        android:layout_alignStart="@+id/radioButtonMale"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_alignEnd="@+id/textViewTitle"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightText"
+        android:textSize="18dp"
+        android:layout_above="@+id/heightText"
+        android:layout_alignRight="@+id/ageText"
+        android:layout_alignEnd="@+id/ageText"
+        android:layout_alignLeft="@+id/ageText"
+        android:layout_alignStart="@+id/ageText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightText"
+        android:textSize="18dp"
+        android:layout_above="@+id/textViewActivity"
+        android:layout_alignLeft="@+id/weightText"
+        android:layout_alignStart="@+id/weightText"
+        android:layout_alignRight="@+id/weightText"
+        android:layout_alignEnd="@+id/weightText" />
+
 </RelativeLayout>

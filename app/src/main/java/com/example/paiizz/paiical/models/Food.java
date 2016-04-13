@@ -6,10 +6,10 @@ package com.example.paiizz.paiical.models;
 public class Food {
 
     private String name;
-    private int calorie;
+    private String calorie;
     private String value;
 
-    public Food (String name ,int calorie,String value){
+    public Food (String name ,String calorie,String value){
         this.name = name ;
         this.calorie = calorie;
         this.value = value ;
