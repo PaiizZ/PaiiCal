@@ -17,8 +17,8 @@ import java.util.List;
  */
 public class Data extends AppCompatActivity {
     private static Data instance;
-    private List<Food> thaifood;
-    private File callText;
+    private static List<Food> thaifood;
+  //  private File callText;
 
     private Data() {
         thaifood = new ArrayList<>();
@@ -30,5 +30,7 @@ public class Data extends AppCompatActivity {
         return instance;
     }
 
-
+    public static List<Food> getThaifood() {
+        return thaifood;
+    }
 }

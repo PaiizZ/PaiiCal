@@ -5,37 +5,26 @@
     android:weightSum="1"
     android:orientation="vertical">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SEARCH MENU"
         android:id="@+id/textviewSearchMenu"
-        android:layout_marginTop="61dp"
-        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LIST CONSUMPTION"
+        android:text="SEARCH CATEGORY"
         android:id="@+id/buttonSearchCategory"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="75dp"
         android:textSize="30dp"
         android:layout_below="@+id/textviewSearchMenu"
-        android:layout_alignLeft="@+id/textviewSearchMenu"
-        android:layout_alignStart="@+id/textviewSearchMenu" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageViewSearchMenu"
-        android:layout_alignBottom="@+id/textviewSearchMenu"
-        android:layout_alignTop="@+id/textviewSearchMenu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/textviewSearchMenu"
-        android:layout_toStartOf="@+id/textviewSearchMenu" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -51,7 +40,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INFORMATION"
+        android:text="SEARCH NAME"
         android:id="@+id/buttonSearchName"
         android:textSize="30dp"
         android:layout_marginTop="40dp"
@@ -62,7 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INTERESTING INFO"
+        android:text="SEARCH CALORIE"
         android:id="@+id/buttonSearchCalorie"
         android:layout_below="@+id/buttonSearchName"
         android:layout_alignLeft="@+id/buttonSearchName"

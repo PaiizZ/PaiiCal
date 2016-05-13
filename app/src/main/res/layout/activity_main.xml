@@ -10,162 +10,171 @@
     tools:context=".activity.MainActivity">
 
     <EditText
+        android:id="@+id/nameTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/nameText"
-        android:layout_marginTop="36dp"
-        android:layout_gravity="left"
-        android:textSize="18dp"
-        android:layout_below="@+id/textViewTitle"
-        android:layout_alignRight="@+id/textViewTitle"
         android:layout_alignEnd="@+id/textViewTitle"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_gravity="left"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/textViewActivity"
         android:layout_toRightOf="@+id/textViewActivity"
-        android:layout_toEndOf="@+id/textViewActivity" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="18dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Personal Information"
         android:id="@+id/textViewTitle"
-        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="Personal Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30dp" />
 
     <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MALE"
         android:id="@+id/radioButtonMale"
-        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textViewGender"
-        android:layout_toRightOf="@+id/textViewGender"
-        android:layout_toEndOf="@+id/textViewGender"
         android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/textViewGender"
+        android:layout_toRightOf="@+id/textViewGender"
+        android:checked="false"
+        android:text="MALE" />
 
     <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FEMALE"
         android:id="@+id/radioButtonFemale"
-        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/radioButtonMale"
-        android:layout_toRightOf="@+id/radioButtonMale"
-        android:layout_toEndOf="@+id/radioButtonMale"
         android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp" />
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/radioButtonMale"
+        android:layout_toRightOf="@+id/radioButtonMale"
+        android:checked="false"
+        android:text="FEMALE" />
 
     <TextView
+        android:id="@+id/textviewNameMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nameTextEditMain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:text="NAME"
-        android:id="@+id/textViewName"
-        android:textSize="20dp"
-        android:layout_alignBottom="@+id/nameText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="20dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GENDER"
         android:id="@+id/textViewGender"
-        android:textSize="20dp"
-        android:layout_marginTop="21dp"
-        android:layout_below="@+id/textViewName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AGE"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textviewNameMain"
+        android:layout_marginTop="21dp"
+        android:text="GENDER"
+        android:textSize="20dp" />
+
+    <TextView
         android:id="@+id/textViewAge"
-        android:layout_below="@+id/textViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewGender"
         android:layout_alignStart="@+id/textViewGender"
+        android:layout_below="@+id/textViewGender"
         android:layout_marginTop="26dp"
+        android:text="AGE"
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/ageTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ageText"
-        android:layout_alignRight="@+id/nameText"
-        android:layout_alignEnd="@+id/nameText"
-        android:textSize="18dp"
         android:layout_above="@+id/textViewWeight"
-        android:layout_toEndOf="@+id/textViewActivity"
-        android:layout_alignLeft="@+id/nameText"
-        android:layout_alignStart="@+id/nameText" />
+        android:layout_alignEnd="@+id/nameTextEditMain"
+        android:layout_alignLeft="@+id/nameTextEditMain"
+        android:layout_alignRight="@+id/nameTextEditMain"
+        android:layout_alignStart="@+id/nameTextEditMain"
+        android:textSize="18dp" />
 
     <TextView
+        android:id="@+id/textViewWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WEIGHT"
-        android:id="@+id/textViewWeight"
-        android:layout_below="@+id/textViewAge"
         android:layout_alignLeft="@+id/textViewAge"
         android:layout_alignStart="@+id/textViewAge"
+        android:layout_below="@+id/textViewAge"
         android:layout_marginTop="30dp"
+        android:text="WEIGHT"
         android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/textViewHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HEIGHT"
-        android:id="@+id/textViewHeight"
-        android:layout_below="@+id/textViewWeight"
         android:layout_alignLeft="@+id/textViewWeight"
         android:layout_alignStart="@+id/textViewWeight"
+        android:layout_below="@+id/textViewWeight"
         android:layout_marginTop="27dp"
+        android:text="HEIGHT"
         android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/textViewActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACTIVITY"
-        android:id="@+id/textViewActivity"
-        android:layout_below="@+id/textViewHeight"
         android:layout_alignLeft="@+id/textViewHeight"
         android:layout_alignStart="@+id/textViewHeight"
+        android:layout_below="@+id/textViewHeight"
         android:layout_marginTop="26dp"
+        android:text="ACTIVITY"
         android:textSize="20dp" />
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/spinnerActivity"
-        android:layout_alignTop="@+id/textViewActivity"
-        android:layout_alignLeft="@+id/radioButtonMale"
-        android:layout_alignStart="@+id/radioButtonMale"
-        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textViewTitle"
-        android:spinnerMode="dropdown" />
+        android:layout_alignLeft="@+id/radioButtonMale"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_alignStart="@+id/radioButtonMale"
+        android:layout_alignTop="@+id/textViewActivity"
+        android:spinnerMode="dropdown"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/weightTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/weightText"
-        android:textSize="18dp"
-        android:layout_above="@+id/heightText"
-        android:layout_alignRight="@+id/ageText"
-        android:layout_alignEnd="@+id/ageText"
-        android:layout_alignLeft="@+id/ageText"
-        android:layout_alignStart="@+id/ageText" />
+        android:layout_above="@+id/heightTextEditMain"
+        android:layout_alignEnd="@+id/ageTextEditMain"
+        android:layout_alignLeft="@+id/ageTextEditMain"
+        android:layout_alignRight="@+id/ageTextEditMain"
+        android:layout_alignStart="@+id/ageTextEditMain"
+        android:textSize="18dp" />
 
     <EditText
+        android:id="@+id/heightTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/heightText"
-        android:textSize="18dp"
         android:layout_above="@+id/textViewActivity"
-        android:layout_alignLeft="@+id/weightText"
-        android:layout_alignStart="@+id/weightText"
-        android:layout_alignRight="@+id/weightText"
-        android:layout_alignEnd="@+id/weightText" />
+        android:layout_alignEnd="@+id/weightTextEditMain"
+        android:layout_alignLeft="@+id/weightTextEditMain"
+        android:layout_alignRight="@+id/weightTextEditMain"
+        android:layout_alignStart="@+id/weightTextEditMain"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/buttonSaveMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="SAVE"
+        android:textSize="20dp" />
 
 </RelativeLayout>
