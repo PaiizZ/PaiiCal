@@ -3,7 +3,6 @@ package com.example.paiizz.paiical.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radioButtonMale, radioButtonFemale;
     Button saveButton;
     Spinner spinnerActivity;
-    String spin_val;
+    String spin_val,gender="";
     String[] menuActivity = {"Choose Activities", "Don't Exercise","Exercise 1-3 day/week.","Exercise 3-5 day/week.","Exercise 6-7 day/week.","Exercise every day, morning and evening."};
 
     @Override
@@ -49,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         split = new String[5];
         loadDataThaifood();
 
-        editName = (EditText) findViewById(R.id.nameTextEditMain);
-        editAge = (EditText) findViewById(R.id.ageTextEditMain);
+        editName = (EditText) findViewById(R.id.nameTextViewInfo);
+        editAge = (EditText) findViewById(R.id.ageTextViewInfo);
         editWeight = (EditText) findViewById(R.id.weightTextEditMain);
         editHeight = (EditText) findViewById(R.id.heightTextEditMain);
 
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 radioButtonFemale.setChecked(false);
+                gender = "Male";
 
             }
         });
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 radioButtonMale.setChecked(false);
+                gender = "Female";
             }
         });
 
@@ -97,11 +98,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 information.setName(editName.getText().toString());
-                information.setAge(Integer.parseInt(editAge.getText().toString()));
-                information.setWeight(Double.parseDouble(editWeight.getText().toString()));
-                information.setHeight(Double.parseDouble(editHeight.getText().toString()));
+                information.setGender(gender);
+                information.setAge(editAge.getText().toString());
+                information.setWeight(editWeight.getText().toString());
+                information.setHeight(editHeight.getText().toString());
+                information.setActivity(spin_val);
 
-                Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+
+                Intent intent = new Intent(MainActivity.this,InformationActivity.class);
                 startActivity(intent);
             }
         });

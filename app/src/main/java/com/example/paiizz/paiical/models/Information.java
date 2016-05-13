@@ -5,39 +5,50 @@ package com.example.paiizz.paiical.models;
  */
 public class Information {
     private static Information instance;
-    private String name, gender;
-    private int age;
-    private double weight, height;
+    private String name;
+    private String gender;
+    private String age;
+    private String weight;
+    private String height;
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+    private String activity;
+
 
     public static Information getInstance() {
         if (instance == null) instance = new Information();
         return instance;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public double getHeight() {
-
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public int getAge() {
-
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 
     public String getGender() {

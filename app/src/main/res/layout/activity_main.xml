@@ -10,7 +10,7 @@
     tools:context=".activity.MainActivity">
 
     <EditText
-        android:id="@+id/nameTextEditMain"
+        android:id="@+id/nameTextViewInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textViewTitle"
@@ -62,7 +62,7 @@
         android:id="@+id/textviewNameMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nameTextEditMain"
+        android:layout_alignBottom="@+id/nameTextViewInfo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:text="NAME"
@@ -91,14 +91,14 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/ageTextEditMain"
+        android:id="@+id/ageTextViewInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewWeight"
-        android:layout_alignEnd="@+id/nameTextEditMain"
-        android:layout_alignLeft="@+id/nameTextEditMain"
-        android:layout_alignRight="@+id/nameTextEditMain"
-        android:layout_alignStart="@+id/nameTextEditMain"
+        android:layout_alignEnd="@+id/nameTextViewInfo"
+        android:layout_alignLeft="@+id/nameTextViewInfo"
+        android:layout_alignRight="@+id/nameTextViewInfo"
+        android:layout_alignStart="@+id/nameTextViewInfo"
         android:textSize="18dp" />
 
     <TextView
@@ -151,10 +151,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/heightTextEditMain"
-        android:layout_alignEnd="@+id/ageTextEditMain"
-        android:layout_alignLeft="@+id/ageTextEditMain"
-        android:layout_alignRight="@+id/ageTextEditMain"
-        android:layout_alignStart="@+id/ageTextEditMain"
+        android:layout_alignEnd="@+id/ageTextViewInfo"
+        android:layout_alignLeft="@+id/ageTextViewInfo"
+        android:layout_alignRight="@+id/ageTextViewInfo"
+        android:layout_alignStart="@+id/ageTextViewInfo"
         android:textSize="18dp" />
 
     <EditText
