@@ -19,7 +19,16 @@
         <activity
             android:name=".activity.InformationActivity"
             android:label="@string/title_activity_information"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SearchMenuActivity"
+            android:label="@string/title_activity_search_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ListConsumptionActivity" />
+        <activity android:name=".activity.InterestingInfoActivity" />
+        <activity android:name=".activity.SearchNameActivity" />
+        <activity android:name=".activity.SearchCalorieActivity" />
+        <activity android:name=".activity.SearchCategoryActivity"></activity>
     </application>
 
 </manifest>

@@ -21,9 +21,8 @@
         android:layout_below="@+id/textViewTitle"
         android:layout_alignRight="@+id/textViewTitle"
         android:layout_alignEnd="@+id/textViewTitle"
-        android:layout_toEndOf="@+id/textViewActivity"
-        android:layout_alignLeft="@+id/buttonEditInfo"
-        android:layout_alignStart="@+id/buttonEditInfo" />
+        android:layout_toEndOf="@+id/buttonEditInfo"
+        android:layout_toRightOf="@+id/buttonEditInfo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,7 +37,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NAME"
+        android:text="Name"
         android:id="@+id/textviewNameMain"
         android:textSize="20dp"
         android:layout_alignBottom="@+id/nameTextViewInfo"
@@ -51,10 +50,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GENDER"
+        android:text="Gender"
         android:id="@+id/textViewGender"
         android:textSize="20dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/textviewNameMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -62,18 +61,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AGE"
+        android:text="Age"
         android:id="@+id/textViewAge"
         android:layout_below="@+id/textViewGender"
         android:layout_alignLeft="@+id/textViewGender"
         android:layout_alignStart="@+id/textViewGender"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="15dp"
         android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ageTextViewInfo"
+        android:id="@+id/ageTextEditInfo"
         android:layout_alignRight="@+id/nameTextViewInfo"
         android:layout_alignEnd="@+id/nameTextViewInfo"
         android:textSize="20sp"
@@ -84,34 +83,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WEIGHT"
+        android:text="Weight"
         android:id="@+id/textViewWeight"
         android:layout_below="@+id/textViewAge"
         android:layout_alignLeft="@+id/textViewAge"
         android:layout_alignStart="@+id/textViewAge"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HEIGHT"
+        android:text="Height"
         android:id="@+id/textViewHeight"
         android:layout_below="@+id/textViewWeight"
         android:layout_alignLeft="@+id/textViewWeight"
         android:layout_alignStart="@+id/textViewWeight"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="15dp"
         android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACTIVITY"
+        android:text="Activity"
         android:id="@+id/textViewActivity"
         android:layout_below="@+id/textViewHeight"
         android:layout_alignLeft="@+id/textViewHeight"
         android:layout_alignStart="@+id/textViewHeight"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="15dp"
         android:textSize="20dp" />
 
     <TextView
@@ -131,10 +130,10 @@
         android:id="@+id/weightTextViewInfo"
         android:textSize="20sp"
         android:layout_alignTop="@+id/textViewWeight"
-        android:layout_alignLeft="@+id/ageTextViewInfo"
-        android:layout_alignStart="@+id/ageTextViewInfo"
-        android:layout_alignRight="@+id/ageTextViewInfo"
-        android:layout_alignEnd="@+id/ageTextViewInfo" />
+        android:layout_alignLeft="@+id/ageTextEditInfo"
+        android:layout_alignStart="@+id/ageTextEditInfo"
+        android:layout_alignRight="@+id/ageTextEditInfo"
+        android:layout_alignEnd="@+id/ageTextEditInfo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,11 +151,59 @@
         android:layout_height="wrap_content"
         android:id="@+id/activityTextViewInfo"
         android:textSize="20sp"
+        android:layout_alignTop="@+id/textViewActivity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignBottom="@+id/textViewActivity"
-        android:layout_alignRight="@+id/heightTextViewInfo"
-        android:layout_alignEnd="@+id/heightTextViewInfo"
         android:layout_alignLeft="@+id/heightTextViewInfo"
         android:layout_alignStart="@+id/heightTextViewInfo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        android:id="@+id/buttonMenuInfo"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_alignEnd="@+id/textViewTitle"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:id="@+id/textView15"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewActivity"
+        android:layout_alignRight="@+id/textViewHeight"
+        android:layout_alignEnd="@+id/textViewHeight"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight Criterion"
+        android:id="@+id/textView16"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want Energy"
+        android:id="@+id/textView17"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -164,8 +211,40 @@
         android:text="EDIT"
         android:id="@+id/buttonEditInfo"
         android:textSize="20dp"
-        android:layout_below="@+id/activityTextViewInfo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp" />
+        android:layout_alignTop="@+id/buttonMenuInfo"
+        android:layout_toRightOf="@+id/textViewActivity"
+        android:layout_toEndOf="@+id/textViewActivity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BMITextViewInfo"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textView15"
+        android:layout_alignLeft="@+id/activityTextViewInfo"
+        android:layout_alignStart="@+id/activityTextViewInfo"
+        android:layout_alignRight="@+id/heightTextViewInfo"
+        android:layout_alignEnd="@+id/heightTextViewInfo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/criterionTextViewInfo"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_toRightOf="@+id/buttonEditInfo"
+        android:layout_alignRight="@+id/BMITextViewInfo"
+        android:layout_alignEnd="@+id/BMITextViewInfo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/WantTextViewInfo"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_alignLeft="@+id/criterionTextViewInfo"
+        android:layout_alignStart="@+id/criterionTextViewInfo"
+        android:layout_alignRight="@+id/criterionTextViewInfo"
+        android:layout_alignEnd="@+id/criterionTextViewInfo" />
 
 </RelativeLayout>

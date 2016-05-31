@@ -10,7 +10,7 @@
     tools:context=".activity.MainActivity">
 
     <EditText
-        android:id="@+id/nameTextViewInfo"
+        android:id="@+id/nameTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textViewTitle"
@@ -62,7 +62,7 @@
         android:id="@+id/textviewNameMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nameTextViewInfo"
+        android:layout_alignBottom="@+id/nameTextEditMain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:text="NAME"
@@ -75,7 +75,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textviewNameMain"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="25dp"
         android:text="GENDER"
         android:textSize="20dp" />
 
@@ -86,19 +86,20 @@
         android:layout_alignLeft="@+id/textViewGender"
         android:layout_alignStart="@+id/textViewGender"
         android:layout_below="@+id/textViewGender"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="25dp"
         android:text="AGE"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/ageTextViewInfo"
+        android:id="@+id/ageTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewWeight"
-        android:layout_alignEnd="@+id/nameTextViewInfo"
-        android:layout_alignLeft="@+id/nameTextViewInfo"
-        android:layout_alignRight="@+id/nameTextViewInfo"
-        android:layout_alignStart="@+id/nameTextViewInfo"
+        android:inputType="number"
+        android:layout_alignEnd="@+id/nameTextEditMain"
+        android:layout_alignLeft="@+id/nameTextEditMain"
+        android:layout_alignRight="@+id/nameTextEditMain"
+        android:layout_alignStart="@+id/nameTextEditMain"
         android:textSize="18dp" />
 
     <TextView
@@ -108,7 +109,7 @@
         android:layout_alignLeft="@+id/textViewAge"
         android:layout_alignStart="@+id/textViewAge"
         android:layout_below="@+id/textViewAge"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="WEIGHT"
         android:textSize="20dp" />
 
@@ -119,7 +120,7 @@
         android:layout_alignLeft="@+id/textViewWeight"
         android:layout_alignStart="@+id/textViewWeight"
         android:layout_below="@+id/textViewWeight"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="20dp"
         android:text="HEIGHT"
         android:textSize="20dp" />
 
@@ -130,7 +131,7 @@
         android:layout_alignLeft="@+id/textViewHeight"
         android:layout_alignStart="@+id/textViewHeight"
         android:layout_below="@+id/textViewHeight"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="20dp"
         android:text="ACTIVITY"
         android:textSize="20dp" />
 
@@ -150,17 +151,19 @@
         android:id="@+id/weightTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_above="@+id/heightTextEditMain"
-        android:layout_alignEnd="@+id/ageTextViewInfo"
-        android:layout_alignLeft="@+id/ageTextViewInfo"
-        android:layout_alignRight="@+id/ageTextViewInfo"
-        android:layout_alignStart="@+id/ageTextViewInfo"
+        android:layout_alignEnd="@+id/ageTextEditMain"
+        android:layout_alignLeft="@+id/ageTextEditMain"
+        android:layout_alignRight="@+id/ageTextEditMain"
+        android:layout_alignStart="@+id/ageTextEditMain"
         android:textSize="18dp" />
 
     <EditText
         android:id="@+id/heightTextEditMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_above="@+id/textViewActivity"
         android:layout_alignEnd="@+id/weightTextEditMain"
         android:layout_alignLeft="@+id/weightTextEditMain"

@@ -1,6 +1,8 @@
 package com.example.paiizz.paiical.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import com.example.paiizz.paiical.R;
+import com.example.paiizz.paiical.models.Cal;
 import com.example.paiizz.paiical.models.Data;
 import com.example.paiizz.paiical.models.Food;
 import com.example.paiizz.paiical.models.Information;
@@ -22,16 +25,22 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String PREFS_NAME = "preferenceName";
+    public static final String PREFS_GENDER = "preferenceGender";
+    public static final String PREFS_AGE = "preferenceAge";
+    public static final String PREFS_WEIGHT = "preferenceWeight";
+    public static final String PREFS_HEIGHT = "preferenceHeight";
+    public static final String PREFS_ACTIVITY = "preferenceActivity";
     private String[] split;
     Data data;
     Information information;
+    Cal cal;
     EditText editName, editAge, editWeight, editHeight;
     RadioButton radioButtonMale, radioButtonFemale;
-    Button saveButton;
     Spinner spinnerActivity;
+    Button saveButton;
     String spin_val,gender="";
-    String[] menuActivity = {"Choose Activities", "Don't Exercise","Exercise 1-3 day/week.","Exercise 3-5 day/week.","Exercise 6-7 day/week.","Exercise every day, morning and evening."};
+    String[] menuActivity = {"Choose Activities", "Don't Exercise.","Exercise 1-3 day/week.","Exercise 3-5 day/week.","Exercise 6-7 day/week.","Exercise every day, morning and evening."};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +48,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initComponent();
 
+        SharedPreferences sharedPref = MainActivity.this.getPreferences(Context.MODE_PRIVATE);
+
+       // information.setName(editName.getText().toString());
+//        information.setGender(gender);
+//        information.setAge(editAge.getText().toString());
+//        information.setWeight(editWeight.getText().toString());
+//        information.setHeight(editHeight.getText().toString());
+//        information.setActivity(spin_val);
+
+        String checkPref = sharedPref.getString(PREFS_NAME, null);
+        if (checkPref != null){
+            Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+            startActivity(intent);
+        }
+        information.setName( sharedPref.getString(PREFS_NAME,null) );
 
     }
 
@@ -48,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         split = new String[5];
         loadDataThaifood();
 
-        editName = (EditText) findViewById(R.id.nameTextViewInfo);
-        editAge = (EditText) findViewById(R.id.ageTextViewInfo);
+        editName = (EditText) findViewById(R.id.nameTextEditMain);
+        editAge = (EditText) findViewById(R.id.ageTextEditMain);
         editWeight = (EditText) findViewById(R.id.weightTextEditMain);
         editHeight = (EditText) findViewById(R.id.heightTextEditMain);
 
@@ -92,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
         // setting adapteers to spinners
         spinnerActivity.setAdapter(spin_adapter);
 
-
         saveButton = (Button) findViewById(R.id.buttonSaveMain);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +126,19 @@ public class MainActivity extends AppCompatActivity {
                 information.setWeight(editWeight.getText().toString());
                 information.setHeight(editHeight.getText().toString());
                 information.setActivity(spin_val);
+                cal = Cal.getInstance();
+                cal.setInformation(information);
+
+                SharedPreferences sharedPref = MainActivity.this.getPreferences(Context.MODE_PRIVATE);
+
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(PREFS_NAME,editName.getText().toString());
+                editor.putString(PREFS_GENDER,gender);
+                editor.putString(PREFS_AGE,editAge.getText().toString());
+                editor.putString(PREFS_WEIGHT,editWeight.getText().toString());
+                editor.putString(PREFS_HEIGHT,editHeight.getText().toString());
+                editor.putString(PREFS_ACTIVITY,spin_val);
+                editor.commit();
 
 
                 Intent intent = new Intent(MainActivity.this,InformationActivity.class);

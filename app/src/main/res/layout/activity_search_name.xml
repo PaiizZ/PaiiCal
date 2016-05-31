@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SEARCH"
-        android:id="@+id/buttonSearchName"
+        android:id="@+id/buttonSearchInName"
         android:layout_marginTop="48dp"
         android:textSize="20dp"
         android:layout_below="@+id/editTextSearchName"

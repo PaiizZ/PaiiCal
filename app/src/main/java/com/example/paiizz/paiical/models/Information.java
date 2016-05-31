@@ -5,12 +5,10 @@ package com.example.paiizz.paiical.models;
  */
 public class Information {
     private static Information instance;
-    private String name;
-    private String gender;
-    private String age;
+    private String name, gender, age;
     private String weight;
     private String height;
-
+    private String activity;
     public String getActivity() {
         return activity;
     }
@@ -19,12 +17,19 @@ public class Information {
         this.activity = activity;
     }
 
-    private String activity;
+
 
 
     public static Information getInstance() {
         if (instance == null) instance = new Information();
         return instance;
+    }
+    public Information(){
+        name="";
+        gender="";
+        weight="";
+        height="";
+        age="";
     }
 
     public String getHeight() {
