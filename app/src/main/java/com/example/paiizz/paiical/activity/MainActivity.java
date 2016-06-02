@@ -50,24 +50,21 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = MainActivity.this.getPreferences(Context.MODE_PRIVATE);
 
-        // information.setName(editName.getText().toString());
-//information.setGender(gender);
-//        information.setAge(editAge.getText().toString());
-//        information.setWeight(editWeight.getText().toString());
-//        information.setHeight(editHeight.getText().toString());
-//        information.setActivity(spin_val);
 
         String checkPref = sharedPref.getString(PREFS_NAME, null);
         if (checkPref != null) {
             information.setName(sharedPref.getString(PREFS_NAME, null));
             information.setGender(sharedPref.getString(PREFS_GENDER, null));
-            information.setAge(sharedPref.getString(PREFS_AGE,null));
-            information.setWeight(sharedPref.getString(PREFS_WEIGHT,null));
-            information.setHeight(sharedPref.getString(PREFS_HEIGHT,null));
-            information.setActivity(sharedPref.getString(PREFS_ACTIVITY,null));
+            information.setAge(sharedPref.getString(PREFS_AGE, null));
+            information.setWeight(sharedPref.getString(PREFS_WEIGHT, null));
+            information.setHeight(sharedPref.getString(PREFS_HEIGHT, null));
+            information.setActivity(sharedPref.getString(PREFS_ACTIVITY, null));
 
-            Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-            startActivity(intent);
+            if (data.isCheckEdit()) {
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+            data.setCheckEdit(true);
         }
 
 
@@ -76,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private void initComponent() {
         data = Data.getInstance();
         information = Information.getInstance();
+
         split = new String[5];
         loadDataThaifood();
 

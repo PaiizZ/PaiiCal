@@ -9,12 +9,14 @@ import android.widget.TextView;
 
 import com.example.paiizz.paiical.R;
 import com.example.paiizz.paiical.models.Cal;
+import com.example.paiizz.paiical.models.Data;
 import com.example.paiizz.paiical.models.Information;
 
 public class InformationActivity extends AppCompatActivity {
 
     Information information;
     Cal cal;
+    Data data;
     TextView textName, textGender, textAge, textWeight, textHeight ,textActivity ,textBMI,textCriterion,textEnergy ;
     Button edit,menu;
     @Override
@@ -27,6 +29,7 @@ public class InformationActivity extends AppCompatActivity {
     private void initComponent() {
         information = Information.getInstance();
         cal = Cal.getInstance();
+        data = Data.getInstance();
 
         textName = (TextView) findViewById(R.id.nameTextViewInfo);
         textGender = (TextView) findViewById(R.id.genderTextViewInfo);
@@ -52,7 +55,7 @@ public class InformationActivity extends AppCompatActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                data.setCheckEdit(false);
                 Intent intent = new Intent(InformationActivity.this, MainActivity.class);
                 startActivity(intent);
             }

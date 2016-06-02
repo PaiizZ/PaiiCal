@@ -4,11 +4,7 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,10 +14,14 @@ import java.util.List;
 public class Data extends AppCompatActivity {
     private static Data instance;
     private static List<Food> thaifood;
+    private boolean checkEdit ;
     //  private File callText;
+
 
     private Data() {
         thaifood = new ArrayList<>();
+        checkEdit = true;
+
     }
 
     public static Data getInstance() {
@@ -31,6 +31,14 @@ public class Data extends AppCompatActivity {
 
     public static List<Food> getThaifood() {
         return thaifood;
+    }
+
+    public boolean isCheckEdit() {
+        return checkEdit;
+    }
+
+    public void setCheckEdit(boolean checkEdit) {
+        this.checkEdit = checkEdit;
     }
 
 }
