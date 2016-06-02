@@ -11,12 +11,10 @@ public class Cal {
 
 
     private Cal() {
-        //information = Information.getInstance();
-
-
+        setInformation();
     }
-    public void setInformation(Information information){
-        this.information = information;
+    public void setInformation(){
+        this.information = Information.getInstance();
         weight = Double.parseDouble(information.getWeight());
         height = Double.parseDouble(information.getHeight());
         age = Double.parseDouble(information.getAge());

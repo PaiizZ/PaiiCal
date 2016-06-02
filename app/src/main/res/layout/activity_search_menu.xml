@@ -40,8 +40,8 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/buttonCategory"
         android:layout_toStartOf="@+id/buttonCategory"
-        android:layout_x="12dp"
-        android:layout_y="86dp" />
+        android:layout_x="5dp"
+        android:layout_y="90dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -79,8 +79,8 @@
         android:layout_toLeftOf="@+id/buttonName"
         android:layout_toStartOf="@+id/buttonName"
         android:layout_alignBottom="@+id/buttonName"
-        android:layout_x="1dp"
-        android:layout_y="195dp" />
+        android:layout_x="2dp"
+        android:layout_y="210dp" />
 
     <ImageView
         android:layout_width="120dp"
@@ -92,7 +92,7 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/buttonCalorie"
         android:layout_toStartOf="@+id/buttonCalorie"
-        android:layout_x="9dp"
-        android:layout_y="324dp" />
+        android:layout_x="2dp"
+        android:layout_y="335dp" />
 
 </AbsoluteLayout>

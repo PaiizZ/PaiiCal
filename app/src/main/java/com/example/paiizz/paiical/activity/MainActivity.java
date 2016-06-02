@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radioButtonMale, radioButtonFemale;
     Spinner spinnerActivity;
     Button saveButton;
-    String spin_val,gender="";
-    String[] menuActivity = {"Choose Activities", "Don't Exercise.","Exercise 1-3 day/week.","Exercise 3-5 day/week.","Exercise 6-7 day/week.","Exercise every day, morning and evening."};
+    String spin_val, gender = "";
+    String[] menuActivity = {"Choose Activities", "Don't Exercise.", "Exercise 1-3 day/week.", "Exercise 3-5 day/week.", "Exercise 6-7 day/week.", "Exercise every day, morning and evening."};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,19 +50,26 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = MainActivity.this.getPreferences(Context.MODE_PRIVATE);
 
-       // information.setName(editName.getText().toString());
-//        information.setGender(gender);
+        // information.setName(editName.getText().toString());
+//information.setGender(gender);
 //        information.setAge(editAge.getText().toString());
 //        information.setWeight(editWeight.getText().toString());
 //        information.setHeight(editHeight.getText().toString());
 //        information.setActivity(spin_val);
 
         String checkPref = sharedPref.getString(PREFS_NAME, null);
-        if (checkPref != null){
-            Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+        if (checkPref != null) {
+            information.setName(sharedPref.getString(PREFS_NAME, null));
+            information.setGender(sharedPref.getString(PREFS_GENDER, null));
+            information.setAge(sharedPref.getString(PREFS_AGE,null));
+            information.setWeight(sharedPref.getString(PREFS_WEIGHT,null));
+            information.setHeight(sharedPref.getString(PREFS_HEIGHT,null));
+            information.setActivity(sharedPref.getString(PREFS_ACTIVITY,null));
+
+            Intent intent = new Intent(MainActivity.this, MenuActivity.class);
             startActivity(intent);
         }
-        information.setName( sharedPref.getString(PREFS_NAME,null) );
+
 
     }
 
@@ -127,21 +134,21 @@ public class MainActivity extends AppCompatActivity {
                 information.setHeight(editHeight.getText().toString());
                 information.setActivity(spin_val);
                 cal = Cal.getInstance();
-                cal.setInformation(information);
+                cal.setInformation();
 
                 SharedPreferences sharedPref = MainActivity.this.getPreferences(Context.MODE_PRIVATE);
 
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString(PREFS_NAME,editName.getText().toString());
-                editor.putString(PREFS_GENDER,gender);
-                editor.putString(PREFS_AGE,editAge.getText().toString());
-                editor.putString(PREFS_WEIGHT,editWeight.getText().toString());
-                editor.putString(PREFS_HEIGHT,editHeight.getText().toString());
-                editor.putString(PREFS_ACTIVITY,spin_val);
+                editor.putString(PREFS_NAME, editName.getText().toString());
+                editor.putString(PREFS_GENDER, gender);
+                editor.putString(PREFS_AGE, editAge.getText().toString());
+                editor.putString(PREFS_WEIGHT, editWeight.getText().toString());
+                editor.putString(PREFS_HEIGHT, editHeight.getText().toString());
+                editor.putString(PREFS_ACTIVITY, spin_val);
                 editor.commit();
 
 
-                Intent intent = new Intent(MainActivity.this,InformationActivity.class);
+                Intent intent = new Intent(MainActivity.this, InformationActivity.class);
                 startActivity(intent);
             }
         });
