@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
         spinnerActivity = (Spinner) findViewById(R.id.spinnerActivity);
         spinnerActivity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spin_val = menuActivity[position];
+            public void onItemSelected(AdapterView<?> parent, View view, int index, long id) {
+                spin_val = menuActivity[index];
                 //Log.e("Test",spin_val);
             }
 

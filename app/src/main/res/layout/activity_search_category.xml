@@ -9,12 +9,12 @@
         android:text="SEARCH CATEGORY"
         android:id="@+id/textView4"
         android:layout_marginTop="50dp"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_x="12dp"
-        android:layout_y="0dp" />
+        android:layout_x="25dp"
+        android:layout_y="10dp" />
 
     <ImageButton
         android:layout_width="60dp"
@@ -24,9 +24,11 @@
         android:layout_below="@+id/textView4"
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:layout_marginLeft="49dp"
         android:layout_marginStart="49dp"
-        android:layout_x="40dp"
+        android:layout_x="35dp"
         android:layout_y="80dp" />
 
     <ImageButton
@@ -34,9 +36,11 @@
         android:layout_height="60dp"
         android:id="@+id/imageButtonSinglefood"
         android:layout_alignTop="@+id/imageButtonThaifood"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/textView6"
-        android:layout_x="160dp"
+        android:layout_x="155dp"
         android:layout_y="80dp" />
 
     <ImageButton
@@ -46,10 +50,12 @@
         android:layout_alignTop="@+id/imageButtonSinglefood"
         android:layout_alignRight="@+id/textView4"
         android:layout_alignEnd="@+id/textView4"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:layout_marginRight="45dp"
         android:layout_marginEnd="45dp"
         android:layout_alignBottom="@+id/imageButtonSinglefood"
-        android:layout_x="280dp"
+        android:layout_x="275dp"
         android:layout_y="80dp" />
 
     <TextView
@@ -62,8 +68,9 @@
         android:layout_below="@+id/imageButtonThaifood"
         android:layout_alignRight="@+id/imageButtonThaifood"
         android:layout_alignEnd="@+id/imageButtonThaifood"
-        android:layout_x="40dp"
-        android:layout_y="150dp" />
+        android:layout_x="35dp"
+        android:layout_y="150dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +79,7 @@
         android:id="@+id/textView6"
         android:layout_alignTop="@+id/textView5"
         android:layout_centerHorizontal="true"
-        android:layout_x="140dp"
+        android:layout_x="135dp"
         android:layout_y="150dp"
         android:textSize="12dp" />
 
@@ -84,7 +91,7 @@
         android:layout_alignTop="@+id/textView6"
         android:layout_alignRight="@+id/textView4"
         android:layout_alignEnd="@+id/textView4"
-        android:layout_x="268dp"
+        android:layout_x="263dp"
         android:layout_y="150dp"
         android:textSize="12dp" />
 
@@ -96,8 +103,10 @@
         android:layout_below="@+id/textView8"
         android:layout_alignLeft="@+id/imageButtonThaifood"
         android:layout_alignStart="@+id/imageButtonThaifood"
-        android:layout_x="40dp"
-        android:layout_y="200dp" />
+        android:layout_x="35dp"
+        android:layout_y="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <ImageButton
         android:layout_width="60dp"
@@ -105,8 +114,10 @@
         android:id="@+id/imageButtonDessert"
         android:layout_alignTop="@+id/imageButtonSnack"
         android:layout_centerHorizontal="true"
-        android:layout_x="160dp"
-        android:layout_y="200dp" />
+        android:layout_x="155dp"
+        android:layout_y="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <ImageButton
         android:layout_width="60dp"
@@ -115,8 +126,10 @@
         android:layout_alignTop="@+id/imageButtonDessert"
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
-        android:layout_x="280dp"
-        android:layout_y="200dp" />
+        android:layout_x="275dp"
+        android:layout_y="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -128,7 +141,7 @@
         android:layout_below="@+id/imageButtonSnack"
         android:layout_alignRight="@+id/imageButtonSnack"
         android:layout_alignEnd="@+id/imageButtonSnack"
-        android:layout_x="50dp"
+        android:layout_x="45dp"
         android:layout_y="270dp" />
 
     <TextView
@@ -139,7 +152,7 @@
         android:textSize="12dp"
         android:layout_alignTop="@+id/textView9"
         android:layout_centerHorizontal="true"
-        android:layout_x="165dp"
+        android:layout_x="160dp"
         android:layout_y="270dp" />
 
     <TextView
@@ -151,7 +164,7 @@
         android:layout_alignTop="@+id/textView10"
         android:layout_alignRight="@+id/imageButtonDrink"
         android:layout_alignEnd="@+id/imageButtonDrink"
-        android:layout_x="293dp"
+        android:layout_x="288dp"
         android:layout_y="270dp" />
 
     <ImageButton
@@ -162,27 +175,33 @@
         android:layout_below="@+id/textView9"
         android:layout_alignLeft="@+id/imageButtonSnack"
         android:layout_alignStart="@+id/imageButtonSnack"
-        android:layout_x="40dp"
-        android:layout_y="320dp" />
+        android:layout_x="35dp"
+        android:layout_y="320dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/imageButtonRestaurnt"
+        android:id="@+id/imageButtonRestaurant"
         android:layout_alignTop="@+id/imageButtonFriut"
         android:layout_centerHorizontal="true"
-        android:layout_x="160dp"
-        android:layout_y="320dp" />
+        android:layout_x="155dp"
+        android:layout_y="320dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/imageButtonEtc"
-        android:layout_alignTop="@+id/imageButtonRestaurnt"
+        android:layout_alignTop="@+id/imageButtonRestaurant"
         android:layout_alignRight="@+id/textView11"
         android:layout_alignEnd="@+id/textView11"
-        android:layout_x="280dp"
-        android:layout_y="320dp" />
+        android:layout_x="275dp"
+        android:layout_y="320dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -194,7 +213,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/imageButtonFriut"
         android:layout_alignEnd="@+id/imageButtonFriut"
-        android:layout_x="50dp"
+        android:layout_x="45dp"
         android:layout_y="390dp" />
 
     <TextView
@@ -205,7 +224,7 @@
         android:textSize="12dp"
         android:layout_alignTop="@+id/textView12"
         android:layout_centerHorizontal="true"
-        android:layout_x="155dp"
+        android:layout_x="150dp"
         android:layout_y="390dp" />
 
     <TextView
@@ -217,6 +236,6 @@
         android:layout_alignTop="@+id/textView13"
         android:layout_alignLeft="@+id/imageButtonEtc"
         android:layout_alignStart="@+id/imageButtonEtc"
-        android:layout_x="298dp"
+        android:layout_x="293dp"
         android:layout_y="390dp" />
 </AbsoluteLayout>
