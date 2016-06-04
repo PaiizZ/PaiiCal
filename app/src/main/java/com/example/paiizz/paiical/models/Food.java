@@ -15,4 +15,15 @@ public class Food {
         this.value = value ;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCalorie() {
+        return calorie;
+    }
+
+    public String getValue() {
+        return value;
+    }
 }

@@ -11,12 +11,14 @@ import com.example.paiizz.paiical.R;
 public class SearchCalorieActivity extends AppCompatActivity {
     Spinner spinnerSearchCalorie;
     String spin_val = "";
-    String[] choiceCalorie = {"The amount of calories","Less than 100 KCal", "Between 100-200 KCal", "Between 200-300 KCal", "Between 300-400 KCal", "Between 400-500 KCal", "Between 500-600 KCal","More than 600 KCal"};
+    String[] choiceCalorie = {"Choice for search calories","Less than 100 KCal", "Between 100-200 KCal", "Between 200-300 KCal", "Between 300-400 KCal", "Between 400-500 KCal","More than 500 KCal"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_calorie);
+        initComponent();
+
     }
 
     private void initComponent(){

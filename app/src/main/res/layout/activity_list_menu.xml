@@ -7,25 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.paiizz.paiical.activity.InterestingInfoActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INTERESTING INFO"
-        android:id="@+id/textView18"
-        android:textSize="35dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    tools:context="com.example.paiizz.paiical.activity.ListMenuActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/card_Recycler"
+        android:id="@+id/menu_Recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView18"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent">
     </android.support.v7.widget.RecyclerView>
-
-
 
 </RelativeLayout>

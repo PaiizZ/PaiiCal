@@ -28,7 +28,8 @@
         <activity android:name=".activity.InterestingInfoActivity" />
         <activity android:name=".activity.SearchNameActivity" />
         <activity android:name=".activity.SearchCalorieActivity" />
-        <activity android:name=".activity.SearchCategoryActivity"></activity>
+        <activity android:name=".activity.SearchCategoryActivity" />
+        <activity android:name=".activity.ListMenuActivity"></activity>
     </application>
 
 </manifest>

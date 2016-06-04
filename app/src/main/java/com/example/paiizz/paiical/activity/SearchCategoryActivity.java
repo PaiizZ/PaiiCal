@@ -1,5 +1,6 @@
 package com.example.paiizz.paiical.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonThaifood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",1);
+                startActivity(intent);
             }
         });
 
@@ -34,7 +37,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonSinglefood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",2);
+                startActivity(intent);
             }
         });
 
@@ -43,7 +48,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonInterfood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",3);
+                startActivity(intent);
             }
         });
 
@@ -52,7 +59,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonSnack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",4);
+                startActivity(intent);
             }
         });
 
@@ -61,7 +70,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonDessert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",5);
+                startActivity(intent);
             }
         });
 
@@ -70,7 +81,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",6);
+                startActivity(intent);
             }
         });
 
@@ -79,7 +92,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonFriut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",7);
+                startActivity(intent);
             }
         });
 
@@ -88,7 +103,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonRestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",8);
+                startActivity(intent);
             }
         });
 
@@ -97,7 +114,9 @@ public class SearchCategoryActivity extends AppCompatActivity {
         buttonEtc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SearchCategoryActivity.this,ListMenuActivity.class);
+                intent.putExtra("index_category",9);
+                startActivity(intent);
             }
         });
 

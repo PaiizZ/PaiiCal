@@ -3,4 +3,5 @@
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_information">InformationActivity</string>
     <string name="title_activity_search_menu">SearchMenuActivity</string>
+    <string name="title_activity_list_menu">ListMenuActivity</string>
 </resources>
