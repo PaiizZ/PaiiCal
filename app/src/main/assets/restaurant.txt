@@ -1,21 +1,19 @@
-แฮมเบอร์เกอร์(MC) 250 1ชิ้น
-เเมคฟิช(MC) 370 1ชิ้น
-เเมคไก่(MC) 370 1ชิ้น
-เเมคนักเกต(MC) 260 6ชิ้น
-เฟรนช์ฟรายส์กลาง(MC) 330 1กล่อง
-ซามูไรเบอร์เกอร์(MC) 370 1ชิ้น
-บิ๊กเเมค(MC) 480 1ชิ้น
-เฟรชสลัด(MC) 110 1จาน
-พาย(MC) 210 1ชิ้น
-ไก่กรอบ(KFC) 320 1ชิ้น
-ไก่นุ่ม(KFC) 280 1ชิ้น
-ข้าวยำไก่เเซบ(KFC) 640 1จาน
-ข้าวยำไก่ซี้ด(KFC) 480 1จาน
-วิงซ์เเซ่บ(KFC) 100 1ชิ้น
-ไก่ป๊อป(KFC) 300 1กล่อง
-นักเก็ตส์(KFC) 45 1ชิ้น
-มันบดปกติ(KFC) 50 1กล่อง
-มันบดใหญ่(KFC) 210 1กล่อง
-ทูน่าคอร์นสลัดปกติ(KFC) 170 1ถ้วย
-ทูน่าคอร์นสลัดใหญ่(KFC) 260 1ถ้วย
-ทาร์ตไข่(KFC) 170 1ชิ้น
+Hamburg (MC)
+MCI's Fish (MC)
+MCI's Chicken (MC)
+MCI's Nuggets (MC) 
+French fries, medium (MC)
+Samurai Burger (MC)
+Big MCI's (MC) 
+Fresh salad (MC) 
+Pie(MC)
+Crispy Chicken (KFC) 
+Soft Chicken (KFC)
+Khao Yam I lean chicken (KFC)
+Khao Yam Seed Chicken (KFC)
+But Brian's Song Qing (KFC) 
+Pop-Chicken (KFC) 
+Nuggets (KFC) 
+Mashed Potato Head (KFC) 
+Corn salad, tuna normal (KFC)
+Tuna salad big corn (KFC)

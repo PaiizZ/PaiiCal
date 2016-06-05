@@ -12,14 +12,20 @@ import java.util.Set;
  */
 public class Data extends AppCompatActivity {
     private static Data instance;
-    private static ArrayList<Food> listAllfood,listThaifood, listSinglefood, listInterfood, listSnack, listDessert, listDrink, listFriut, listRestaurant, listEtc;
-    private static ArrayList<Food> listLess100,listBetween100to200,listBetween200to300,listBetween300to400,listBetween400to500,listMore500;
-
+    private static ArrayList<Food> listAllfood, listThaifood, listSinglefood, listInterfood, listSnack, listDessert, listDrink, listFriut, listRestaurant, listEtc;
+    private static ArrayList<Food> listLess100, listBetween100to200, listBetween200to300, listBetween300to400, listBetween400to500, listMore500;
+    private static ArrayList<Food> listEat,listSearchName;
+    private static ArrayList<String> listInteresting;
+    private int index_search;
     private boolean checkEdit;
     //  private File callText;
 
 
+
+
     private Data() {
+        index_search = 0 ;
+
         listAllfood = new ArrayList<>();
         listThaifood = new ArrayList<>();
         listSinglefood = new ArrayList<>();
@@ -30,14 +36,16 @@ public class Data extends AppCompatActivity {
         listFriut = new ArrayList<>();
         listRestaurant = new ArrayList<>();
         listEtc = new ArrayList<>();
-        listLess100  = new ArrayList<>();
-        listBetween100to200  = new ArrayList<>();
-        listBetween200to300  = new ArrayList<>();
-        listBetween300to400  = new ArrayList<>();
-        listBetween400to500  = new ArrayList<>();
-        listMore500  = new ArrayList<>();
-
-
+        listLess100 = new ArrayList<>();
+        listBetween100to200 = new ArrayList<>();
+        listBetween200to300 = new ArrayList<>();
+        listBetween300to400 = new ArrayList<>();
+        listBetween400to500 = new ArrayList<>();
+        listMore500 = new ArrayList<>();
+        listEat = new ArrayList<>();
+        listInteresting = new ArrayList<>();
+        listSearchName = new ArrayList<>();
+        addlistInterestingInfo();
         checkEdit = true;
 
     }
@@ -46,6 +54,7 @@ public class Data extends AppCompatActivity {
         if (instance == null) instance = new Data();
         return instance;
     }
+
     public static ArrayList<Food> getListAllfood() {
         return listAllfood;
     }
@@ -73,40 +82,49 @@ public class Data extends AppCompatActivity {
     public static ArrayList<Food> getListMore500() {
         return listMore500;
     }
-    public static List<Food> getListThaifood() {
+
+    public static ArrayList<Food> getListThaifood() {
         return listThaifood;
     }
 
-    public static List<Food> getListSinglefood() {
+    public static ArrayList<Food> getListSinglefood() {
         return listSinglefood;
     }
 
-    public static List<Food> getListInterfood() {
+    public static ArrayList<Food> getListInterfood() {
         return listInterfood;
     }
 
-    public static List<Food> getListSnack() {
+    public static ArrayList<Food> getListSnack() {
         return listSnack;
     }
 
-    public static List<Food> getListDessert() {
+    public static ArrayList<Food> getListDessert() {
         return listDessert;
     }
 
-    public static List<Food> getListDrink() {
+    public static ArrayList<Food> getListDrink() {
         return listDrink;
     }
 
-    public static List<Food> getListFriut() {
+    public static ArrayList<Food> getListFriut() {
         return listFriut;
     }
 
-    public static List<Food> getListRestaurant() {
+    public static ArrayList<Food> getListRestaurant() {
         return listRestaurant;
     }
 
-    public static List<Food> getListEtc() {
+    public static ArrayList<Food> getListEtc() {
         return listEtc;
+    }
+
+    public static ArrayList<Food> getListEat() {
+        return listEat;
+    }
+
+    public static ArrayList<String> getListInteresting() {
+        return listInteresting;
     }
 
     public boolean isCheckEdit() {
@@ -117,4 +135,26 @@ public class Data extends AppCompatActivity {
         this.checkEdit = checkEdit;
     }
 
+    public int getIndex_search() {
+        return index_search;
+    }
+
+    public void setIndex_search(int index_search) {
+        this.index_search = index_search;
+    }
+    public static ArrayList<Food> getListSearchName() {
+        return listSearchName;
+    }
+    public void removeDateInListSearchName(){
+        listSearchName.clear();
+    }
+
+    public void addlistInterestingInfo() {
+        getListInteresting().add("BMI");
+        getListInteresting().add("BMR");
+        getListInteresting().add("How to lose weight");
+        getListInteresting().add("How to control weightI");
+        getListInteresting().add("How to good shape");
+        getListInteresting().add("How to good exercise");
+    }
 }

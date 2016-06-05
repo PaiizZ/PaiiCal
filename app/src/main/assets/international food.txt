@@ -1,25 +1,20 @@
-เทมปุระ 250 3ชิ้น
-โซบะหน้าเทมปุระ 280 1ชาม
-กิวดัง 720 1ชาม
-ข้าวหน้าไก่โอยาโกะดัง 690 1ชาม
-ข้าวหน้าปลาไหล 800 1ชาม
-ข้าวหน้าหมูทอดัทซึด้ง 1020 1ชาม
-ข้าวอบ 370 1ชาม
-อูด้ง 400 1ชาม
-ชิราชิซูชิ 610 1ชุด
-ชุดเทมปุระ 830 1ชุด
-ชุดซาซิมิ 610
-ชุดปลาซาบะ 755 1ชุด
-ชุดปลาอาจิย่างเกลือ 720 1ชุด
-ชุดสุกี้ยากี้ 925 1ชุด
-เฝอ 235 1ถ้วย
-ก๋วยจั๊บญวณ 235 1ถ้วย
-เเซนวิชไก่ 240 1คู่
-เเซนวิชทูน่า 180 1คุ่
-แฮมเบอร์เกอร์หมู 245 1 อัน
-ซุปเห็ด 140 1ถ้วย
-พิซซ่าฮาวายเฮี้ยน 345 1ชิ้น
-พิซซ่าทะเล 335 1ชิ้น
-สเต็กหมู 375 1จาน
-สปาเก็ตตี้ไก่ 430 1จาน
-สลัดไก่ 100 1จาน
+Tempura
+Chicken rice 
+Eel rice
+Pork chop rice
+Baked rice 
+Chirashizushi 
+Tempura set 
+Sashimi
+Series of Saba
+Series Aji grilled 
+Sukiyaki
+Chicken sandwich
+Tuna sandwich 
+Pork hamburger 
+Mushroom soup 
+Hawaiian pizza 
+Seafood pizza 
+Pork steak
+Spaghetti with chicken
+Chicken salad

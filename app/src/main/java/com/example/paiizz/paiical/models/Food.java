@@ -8,11 +8,15 @@ public class Food {
     private String name;
     private String calorie;
     private String value;
+    private String type;
 
-    public Food (String name ,String calorie,String value){
-        this.name = name ;
+
+    public Food(String name, String calorie, String value, String type) {
+        this.name = name;
         this.calorie = calorie;
-        this.value = value ;
+        this.value = value;
+        this.type = type;
+
     }
 
     public String getName() {
@@ -25,5 +29,9 @@ public class Food {
 
     public String getValue() {
         return value;
+    }
+
+    public String getType() {
+        return type;
     }
 }

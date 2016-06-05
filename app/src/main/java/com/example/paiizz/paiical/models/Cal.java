@@ -51,14 +51,16 @@ public class Cal {
 
     public String getCriterion() {
         if (getBMI() < 18.50)
-            return "Thin";
-        else if (getBMI() >= 18.50 && getBMI() <= 22.99)
-            return "Normal";
-        else if (getBMI() >= 23 && getBMI() <= 24.99)
-            return "Fat level 1";
+            return "Underweight";
+        else if (getBMI() >= 18.50 && getBMI() <= 24.99)
+            return "Normal Weight";
         else if (getBMI() >= 25 && getBMI() <= 29.99)
-            return "Fat level 2";
+            return "Overweight";
+        else if (getBMI() >= 30 && getBMI() <= 34.99)
+            return "Obesity (Class 1)";
+        else if (getBMI() >= 35 && getBMI() <= 39.99)
+            return "Obesity (Class 2)";
         else
-            return "Fat level 3";
+            return "Morbid Obesity";
     }
 }

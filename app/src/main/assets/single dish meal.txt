@@ -1,30 +1,21 @@
-เกี๊ยวน้ำกุ้ง 275 1ถ้วย
-โจ๊กหมู 175 1ถ้วย
-โจ๊กใส่ไข่ 250 1ถ้วย
-กระเพาะปลา 225 1ชาม
-ก๋วยเตี๋ยวเรือน้ำตกเเห้ง 225 1ชาม
-ก๋วยเตี๋ยวเรือน้ำตกน้ำ 180 1ชาม
-ก๋วยเตี๋ยวเส้นเล็กแห้งหมู 430 1ชาม
-ก๋วยเตี๋ยวเส้นเล็กต้มยำหมุ 335 1ชาม
-เส้นใหญ่ผัดซี้อิ๊วใส่ไข่ 650 1จาน
-เส้นใหญ่ราดหน้า 400 1ชาม
-ก๋วยเตี๋ยวคั่วไก่ 440 1ชาม
-ก๋วยจั๊บ 240 1ชาม
-ขนมจีนน้ำยา 375 1จาน
-ขนมจีนน้ำเงี้ยว 305 1จาน
-ข้าวแกงกะหรี่ 375 1จาน
-ข้านไข่เจียว 445 1จาน
-ข้าวไข่เจียวหมูสับ 500 1จาน
-ข้าวขาหมู 690 1จาน
-ข้าวคลุกกะปิ 600 1จาน
-ข้าวซอยไก่ 395 1ชาม
-ข้าวผัดปู 610 1ชาม
-ข้ามผัดอเมริกัน 790 1ชาม
-ข้ามมันไก่ 600 1จาน
-ข้าวหมูแดง 560 1จาน
-ข้ามหมูกรอป 590 1จาน
-ข้าวหมูทอดกระเทียม 525 1จาน
-บะหมี่หมูแดง 345 1ชาม
-ผัดไทย 580 1จาน
-สุกี้ 220 1ชาม
-มักโรนีไก่ 230 1จาน
+Shrimp dumpling 
+Pork porridge 
+Egg porridge 
+Fish maw 
+Boat noodle
+Waterfall water 
+Small rice noodle dry pork 
+Chicken noodle
+Chicken fried with ginger 
+Khanom chin Nam ngiao 
+Curry Rice 
+Rice with minced pork 
+Braised pork with rice 
+Fried rice with shrimp paste 
+Chicken fried rice 
+Fried rice with crab 
+Cross with American 
+Fried rice with pork and garlic 
+Roasted pork noodles
+Suki 
+Macaroni

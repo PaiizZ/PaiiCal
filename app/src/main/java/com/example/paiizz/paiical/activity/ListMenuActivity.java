@@ -1,81 +1,139 @@
 package com.example.paiizz.paiical.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.example.paiizz.paiical.R;
 import com.example.paiizz.paiical.models.Data;
 import com.example.paiizz.paiical.models.Food;
 import com.example.paiizz.paiical.views.MenuAdapter;
+import com.example.paiizz.paiical.views.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 
 public class ListMenuActivity extends AppCompatActivity {
-    private int index_category;
+    private int index_category, index_calorie;
     private MenuAdapter menuAdapter;
     private RecyclerView recyclerView;
     private Data data;
+    private int index_case;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_menu);
-        index_category = (int) getIntent().getSerializableExtra("index_category");
+        data = Data.getInstance();
+        switch (data.getIndex_search()) {
+            case 1:
+                index_category = (int) getIntent().getSerializableExtra("index_category");
+                index_case = 1;
+                break;
+            case 2:
+                index_case = 2;
+                break;
+            case 3:
+                index_calorie = (int) getIntent().getSerializableExtra("calorie");
+                index_case = 3;
+                break;
+            default:
+                break;
+        }
         initComponent();
     }
 
     private void initComponent() {
-        data = Data.getInstance();
-        Log.e("index_category",index_category+"");
-        switch (index_category) {
-            case 1: {
-                menuAdapter = new MenuAdapter(data.getListThaifood());
-                break;
-            }
-            case 2: {
-                menuAdapter = new MenuAdapter(data.getListSinglefood());
-                break;
-            }
-            case 3: {
-                menuAdapter = new MenuAdapter(data.getListInterfood());
-                break;
-            }
-            case 4: {
-                menuAdapter = new MenuAdapter(data.getListSnack());
-                break;
-            }
-            case 5: {
-                menuAdapter = new MenuAdapter(data.getListDessert());
-                break;
-            }
-            case 6: {
-                menuAdapter = new MenuAdapter(data.getListDrink());
-                break;
-            }
-            case 7: {
-                menuAdapter = new MenuAdapter(data.getListFriut());
-                break;
-            }
-            case 8: {
-                menuAdapter = new MenuAdapter(data.getListRestaurant());
-                break;
-            }
-            default: {
-                menuAdapter = new MenuAdapter(data.getListEtc());
-                break;
-            }
 
-
+        // Log.e("index_category",index_category+"");
+        //Log.e("Thai1",data.getListThaifood().size()+"");
+        if (index_case == 1) {
+            switch (index_category) {
+                case 1: {
+                    //Log.e("Thai2",data.getListThaifood().size()+"");
+                    menuAdapter = new MenuAdapter(data.getListThaifood());
+                    // Log.e("menuAdapter", menuAdapter.getItemCount() + "");
+                    break;
+                }
+                case 2: {
+                    menuAdapter = new MenuAdapter(data.getListSinglefood());
+                    break;
+                }
+                case 3: {
+                    menuAdapter = new MenuAdapter(data.getListInterfood());
+                    break;
+                }
+                case 4: {
+                    menuAdapter = new MenuAdapter(data.getListSnack());
+                    break;
+                }
+                case 5: {
+                    menuAdapter = new MenuAdapter(data.getListDessert());
+                    break;
+                }
+                case 6: {
+                    menuAdapter = new MenuAdapter(data.getListDrink());
+                    break;
+                }
+                case 7: {
+                    menuAdapter = new MenuAdapter(data.getListFriut());
+                    break;
+                }
+                case 8: {
+                    menuAdapter = new MenuAdapter(data.getListRestaurant());
+                    break;
+                }
+                case 9: {
+                    menuAdapter = new MenuAdapter(data.getListEtc());
+                    break;
+                }
+                default:
+                    break;
+            }
+        } else if (index_case == 2) {
+            menuAdapter = new MenuAdapter(data.getListSearchName());
+        } else if (index_case == 3) {
+            switch (index_calorie) {
+                case 1: {
+                    menuAdapter = new MenuAdapter(data.getListLess100());
+                    break;
+                }
+                case 2: {
+                    menuAdapter = new MenuAdapter(data.getListBetween100to200());
+                    break;
+                }
+                case 3: {
+                    menuAdapter = new MenuAdapter(data.getListBetween200to300());
+                    break;
+                }
+                case 4: {
+                    menuAdapter = new MenuAdapter(data.getListBetween300to400());
+                    break;
+                }
+                case 5: {
+                    menuAdapter = new MenuAdapter(data.getListBetween300to400());
+                    break;
+                }
+                case 6: {
+                    menuAdapter = new MenuAdapter(data.getListMore500());
+                    break;
+                }
+                default:
+                    break;
+            }
         }
-        //menuAdapter = new MenuAdapter(data.getListThaifood());
-        recyclerView =(RecyclerView)findViewById(R.id.menu_Recycler);
+        recyclerView = (RecyclerView) findViewById(R.id.menu_Recycler);
         recyclerView.setAdapter(menuAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        Log.i("kkk",menuAdapter.getItemCount()+" ");
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
 
+            }
+        }));
     }
 
 

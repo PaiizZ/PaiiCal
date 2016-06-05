@@ -17,13 +17,8 @@ import android.widget.Spinner;
 import com.example.paiizz.paiical.R;
 import com.example.paiizz.paiical.models.Cal;
 import com.example.paiizz.paiical.models.Data;
-import com.example.paiizz.paiical.models.Food;
 import com.example.paiizz.paiical.models.Information;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "preferenceName";
@@ -41,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     Button saveButton;
     String spin_val, gender = "";
     String[] menuActivity = {"Choose Activities", "Don't Exercise.", "Exercise 1-3 day/week.", "Exercise 3-5 day/week.", "Exercise 6-7 day/week.", "Exercise every day, morning and evening."};
-    private String[] split;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,17 +69,6 @@ public class MainActivity extends AppCompatActivity {
     private void initComponent() {
         data = Data.getInstance();
         information = Information.getInstance();
-        split = new String[5];
-
-                loadDataThaifood();
-//        loadDataSinglefood();
-//        loadDataInterfood();
-//        loadDataSnack();
-//        loadDataDessert();
-//        loadDataDrink();
-// loadDataFriut();
-//        loadDataRestaurant();
-//        loadDataEtc();
 
         editName = (EditText) findViewById(R.id.nameTextEditMain);
         editAge = (EditText) findViewById(R.id.ageTextEditMain);
@@ -162,203 +146,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    private void loadDataThaifood() {
-
-        try {
-            InputStream is = getAssets().open("thai food.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Log.e("eiei", split[0] + split[2] + split[4]);
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListThaifood().add(food);
-                //data.getListAllfood().add(food);
-                //addListCalorie(Integer.parseInt(split[2]), food);
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataSinglefood() {
-
-        try {
-            InputStream is = getAssets().open("single dish meal.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListSinglefood().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataInterfood() {
-
-        try {
-            InputStream is = getAssets().open("international food.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListInterfood().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataSnack() {
-
-        try {
-            InputStream is = getAssets().open("snack.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListSnack().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataFriut() {
-
-        try {
-            InputStream is = getAssets().open("friut.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListFriut().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataDessert() {
-
-        try {
-            InputStream is = getAssets().open("dessert.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListDessert().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataDrink() {
-
-        try {
-            InputStream is = getAssets().open("drink.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListDrink().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataRestaurant() {
-
-        try {
-            InputStream is = getAssets().open("restaurant.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListRestaurant().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void loadDataEtc() {
-
-        try {
-            InputStream is = getAssets().open("etc.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                split = line.split(" ");
-                Food food = new Food(split[0], split[2], split[4]);
-                data.getListEtc().add(food);
-                data.getListAllfood().add(food);
-                addListCalorie(Integer.parseInt(split[2]), food);
-                //Log.e("eiei", split[0] + split[2] + split[4]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void addListCalorie(int i , Food food) {
-        if (i < 100) {
-            data.getListLess100().add(food);
-        } else if (i >= 100 && i < 200) {
-            data.getListBetween100to200().add(food);
-        } else if (i >= 200 && i < 300) {
-            data.getListBetween200to300().add(food);
-        } else if (i >= 300 && i < 400) {
-            data.getListBetween300to400().add(food);
-        } else if (i >= 400 && i < 500) {
-            data.getListBetween400to500().add(food);
-        } else {
-            data.getListMore500().add(food);
-        }
-    }
 
 }
 

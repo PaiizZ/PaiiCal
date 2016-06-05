@@ -21,6 +21,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
     private String name ;
     private String calorie;
     private String value;
+    private String type;
 
     public MenuAdapter(List<Food> objects) {
         listFood = objects;
@@ -41,7 +42,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
         name = listFood.get(position).getName();
         calorie = listFood.get(position).getCalorie();
         value = listFood.get(position).getValue();
-        holder.listmenuview.setText(name+"/n"+calorie+" KCal "+value);
+        type = listFood.get(position).getType();
+        holder.listmenuview.setText(name+"\n"+calorie+" KCal "+value+" "+type);
     }
 
     @Override

@@ -29,7 +29,13 @@
         <activity android:name=".activity.SearchNameActivity" />
         <activity android:name=".activity.SearchCalorieActivity" />
         <activity android:name=".activity.SearchCategoryActivity" />
-        <activity android:name=".activity.ListMenuActivity"></activity>
+        <activity android:name=".activity.ListMenuActivity" />
+        <activity android:name=".activity.BMIActivity" />
+        <activity android:name=".activity.BMRActivity" />
+        <activity android:name=".activity.LoseWeightActivity" />
+        <activity android:name=".activity.ControlWeightActivity" />
+        <activity android:name=".activity.GoodShapeActivity" />
+        <activity android:name=".activity.GoodExerciseActivity"></activity>
     </application>
 
 </manifest>
