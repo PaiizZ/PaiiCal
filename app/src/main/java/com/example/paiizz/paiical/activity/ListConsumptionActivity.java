@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.paiizz.paiical.R;
@@ -22,10 +23,9 @@ import java.util.Date;
 import java.util.Observable;
 import java.util.Timer;
 
-public class ListConsumptionActivity extends AppCompatActivity{
+public class ListConsumptionActivity extends AppCompatActivity {
     private TextView toDayEat, eatFromEnegy, dateText;
-    private Calendar calendar;
-    Date date;
+    private ImageView imageView;
     private ConsumptionAdapter consumptionAdapter;
     Data data;
     Cal cal;
@@ -48,13 +48,17 @@ public class ListConsumptionActivity extends AppCompatActivity{
         cal = Cal.getInstance();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
-        calendar = Calendar.getInstance();
         toDayEat = (TextView) findViewById(R.id.textViewTodateat);
-        toDayEat.setText("Todat,eat "+cal.calKcalthateat(data.getListEat())+" Kcal");
+        toDayEat.setText("Todat,eat " + cal.calKcalthateat(data.getListEat()) + " Kcal");
         eatFromEnegy = (TextView) findViewById(R.id.textViewEatfromEnegy);
-        eatFromEnegy.setText(String.format("%.2f %% from energy want",cal.percentKcalthateat(data.getListEat())));
+        eatFromEnegy.setText(String.format("%.2f %% from energy want", cal.percentKcalthateat(data.getListEat())));
         dateText = (TextView) findViewById(R.id.textViewDate);
         dateText.setText(dateFormat.format(date));
+        imageView = (ImageView) findViewById(R.id.imageViewConsumption);
+        if (cal.percentKcalthateat(data.getListEat()) <= 100.0)
+            imageView.setImageResource(R.drawable.smiley);
+        else
+            imageView.setImageResource(R.drawable.sad);
 
 
         consumptionAdapter = new ConsumptionAdapter(data.getListEat(), this);
