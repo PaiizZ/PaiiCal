@@ -1,5 +1,8 @@
 package com.example.paiizz.paiical.models;
 
+import java.util.AbstractList;
+import java.util.ArrayList;
+
 /**
  * Created by PaiizZ on 5/21/2016 AD.
  */
@@ -66,5 +69,20 @@ public class Cal {
             return "Obesity (Class 2)";
         else
             return "Morbid Obesity";
+    }
+    public int calKcalthateat(ArrayList<Food> list){
+        int sum = 0;
+        for (Food l : list){
+            sum =+ Integer.parseInt(l.getCalorie());
+        }
+        return sum;
+    }
+    public double percentKcalthateat(ArrayList<Food> list){
+        int sum = 0;
+        for (Food l : list){
+            sum =+ Integer.parseInt(l.getCalorie());
+        }
+
+        return (sum/getBMR())*100.0;
     }
 }

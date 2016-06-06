@@ -22,6 +22,7 @@ public class ListMenuActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Data data;
     private int index_case;
+    private ListConsumptionActivity listConsumptionActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,12 +129,6 @@ public class ListMenuActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.menu_Recycler);
         recyclerView.setAdapter(menuAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-
-            }
-        }));
     }
 
 

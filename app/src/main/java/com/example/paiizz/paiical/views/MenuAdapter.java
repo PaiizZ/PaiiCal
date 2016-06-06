@@ -13,6 +13,7 @@ import com.example.paiizz.paiical.R;
 import com.example.paiizz.paiical.activity.ListConsumptionActivity;
 import com.example.paiizz.paiical.activity.ListMenuActivity;
 import com.example.paiizz.paiical.activity.MainActivity;
+import com.example.paiizz.paiical.models.Cal;
 import com.example.paiizz.paiical.models.Data;
 import com.example.paiizz.paiical.models.Food;
 
@@ -30,6 +31,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
     private String value;
     private String type;
     private ListMenuActivity listMenuActivity;
+    Cal cal;
+    Data data;
 
     public MenuAdapter(List<Food> objects,ListMenuActivity listMenuActivity) {
         listFood = objects;
@@ -69,7 +72,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
                                 listMenuActivity.startActivity(intent);
                             }
                         })
-                        .setPositiveButton("No",null)
+                        .setPositiveButton("No", null)
                         .show();
                 return true;
             }
