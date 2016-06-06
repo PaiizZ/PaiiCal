@@ -26,15 +26,13 @@ import java.util.Random;
 public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
 
     private List<Food> listFood;
-    private String name ;
+    private String name;
     private String calorie;
     private String value;
     private String type;
     private ListMenuActivity listMenuActivity;
-    Cal cal;
-    Data data;
 
-    public MenuAdapter(List<Food> objects,ListMenuActivity listMenuActivity) {
+    public MenuAdapter(List<Food> objects, ListMenuActivity listMenuActivity) {
         listFood = objects;
         this.listMenuActivity = listMenuActivity;
     }
@@ -55,7 +53,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
         calorie = listFood.get(position).getCalorie();
         value = listFood.get(position).getValue();
         type = listFood.get(position).getType();
-        holder.listmenuview.setText(name+"\n"+calorie+" KCal "+value+" "+type);
+        holder.listmenuview.setText(name + "\n" + calorie + " KCal " + value + " " + type);
 
         holder.listmenuview.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

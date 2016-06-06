@@ -1,5 +1,7 @@
 package com.example.paiizz.paiical.models;
 
+import android.util.Log;
+
 import java.util.AbstractList;
 import java.util.ArrayList;
 
@@ -12,7 +14,7 @@ public class Cal {
     Information information;
     private double weight, height, age;
     private String activity;
-
+    private int sum = 0;
 
     private Cal() {
         setInformation();
@@ -71,18 +73,17 @@ public class Cal {
             return "Morbid Obesity";
     }
     public int calKcalthateat(ArrayList<Food> list){
-        int sum = 0;
-        for (Food l : list){
-            sum =+ Integer.parseInt(l.getCalorie());
+        sum = 0;
+        for (int i = 0 ; i < list.size() ; i++ ){
+            sum += Integer.parseInt(list.get(i).getCalorie());
         }
         return sum;
     }
     public double percentKcalthateat(ArrayList<Food> list){
-        int sum = 0;
+        sum = 0;
         for (Food l : list){
-            sum =+ Integer.parseInt(l.getCalorie());
+            sum += Integer.parseInt(l.getCalorie());
         }
-
         return (sum/getBMR())*100.0;
     }
 }

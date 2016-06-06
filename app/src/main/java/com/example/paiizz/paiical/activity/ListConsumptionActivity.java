@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Observable;
+import java.util.Observer;
 import java.util.Timer;
 
 public class ListConsumptionActivity extends AppCompatActivity {
@@ -68,6 +69,5 @@ public class ListConsumptionActivity extends AppCompatActivity {
 
 
     }
-
 
 }

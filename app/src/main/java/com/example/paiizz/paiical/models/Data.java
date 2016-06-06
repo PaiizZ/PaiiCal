@@ -1,16 +1,11 @@
 package com.example.paiizz.paiical.models;
 
-import android.support.v7.app.AppCompatActivity;
-
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by PaiizZ on 4/13/2016 AD.
  */
-public class Data  {
+public class Data {
     private static Data instance;
     private static ArrayList<Food> listAllfood, listThaifood, listSinglefood, listInterfood, listSnack, listDessert, listDrink, listFriut, listRestaurant, listEtc;
     private static ArrayList<Food> listLess100, listBetween100to200, listBetween200to300, listBetween300to400, listBetween400to500, listMore500;
@@ -22,6 +17,7 @@ public class Data  {
 
     private Data() {
         index_search = 0;
+
         listAllfood = new ArrayList<>();
         listThaifood = new ArrayList<>();
         listSinglefood = new ArrayList<>();
@@ -43,6 +39,7 @@ public class Data  {
         listSearchName = new ArrayList<>();
         addlistInterestingInfo();
         checkEdit = true;
+
 
     }
 
