@@ -9,14 +9,6 @@ public class Information {
     private String weight;
     private String height;
     private String activity;
-    public String getActivity() {
-        return activity;
-    }
-
-    public void setActivity(String activity) {
-        this.activity = activity;
-    }
-
 
 
 
@@ -72,5 +64,12 @@ public class Information {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+    public String getActivity() {
+        return activity;
     }
 }

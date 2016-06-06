@@ -63,11 +63,12 @@
         android:layout_y="200dp"
         android:textSize="18dp" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:id="@+id/listView"
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/consumption_recycler"
         android:layout_x="5dp"
-        android:layout_y="240dp" />
+        android:layout_y="240dp">
+    </android.support.v7.widget.RecyclerView>
 
 </AbsoluteLayout>

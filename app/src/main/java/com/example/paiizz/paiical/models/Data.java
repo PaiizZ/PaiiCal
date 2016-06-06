@@ -10,22 +10,18 @@ import java.util.Set;
 /**
  * Created by PaiizZ on 4/13/2016 AD.
  */
-public class Data extends AppCompatActivity {
+public class Data  {
     private static Data instance;
     private static ArrayList<Food> listAllfood, listThaifood, listSinglefood, listInterfood, listSnack, listDessert, listDrink, listFriut, listRestaurant, listEtc;
     private static ArrayList<Food> listLess100, listBetween100to200, listBetween200to300, listBetween300to400, listBetween400to500, listMore500;
-    private static ArrayList<Food> listEat,listSearchName;
+    private static ArrayList<Food> listEat, listSearchName;
     private static ArrayList<String> listInteresting;
     private int index_search;
     private boolean checkEdit;
-    //  private File callText;
-
-
 
 
     private Data() {
-        index_search = 0 ;
-
+        index_search = 0;
         listAllfood = new ArrayList<>();
         listThaifood = new ArrayList<>();
         listSinglefood = new ArrayList<>();
@@ -142,10 +138,12 @@ public class Data extends AppCompatActivity {
     public void setIndex_search(int index_search) {
         this.index_search = index_search;
     }
+
     public static ArrayList<Food> getListSearchName() {
         return listSearchName;
     }
-    public void removeDateInListSearchName(){
+
+    public void removeDateInListSearchName() {
         listSearchName.clear();
     }
 
@@ -153,7 +151,7 @@ public class Data extends AppCompatActivity {
         getListInteresting().add("BMI");
         getListInteresting().add("BMR");
         getListInteresting().add("How to lose weight");
-        getListInteresting().add("How to control weightI");
+        getListInteresting().add("How to control weight");
         getListInteresting().add("How to good shape");
         getListInteresting().add("How to good exercise");
     }

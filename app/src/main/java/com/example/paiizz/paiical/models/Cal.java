@@ -5,6 +5,7 @@ package com.example.paiizz.paiical.models;
  */
 public class Cal {
     private static Cal instance;
+    Data data;
     Information information;
     private double weight, height, age;
     private String activity;
@@ -13,20 +14,23 @@ public class Cal {
     private Cal() {
         setInformation();
     }
-    public void setInformation(){
+
+    public void setInformation() {
+        data = Data.getInstance();
         this.information = Information.getInstance();
         weight = Double.parseDouble(information.getWeight());
         height = Double.parseDouble(information.getHeight());
         age = Double.parseDouble(information.getAge());
         activity = information.getActivity();
     }
+
     public static Cal getInstance() {
         if (instance == null) instance = new Cal();
         return instance;
     }
 
     public double getBMI() {
-        return weight / Math.pow(height*0.01,2);
+        return weight / Math.pow(height * 0.01, 2);
     }
 
     public double getBMR() {

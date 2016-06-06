@@ -26,9 +26,10 @@ public class InformationActivity extends AppCompatActivity {
     }
 
     private void initComponent() {
+        data = Data.getInstance();
         information = Information.getInstance();
         cal = Cal.getInstance();
-        data = Data.getInstance();
+
 
         textName = (TextView) findViewById(R.id.nameTextViewInfo);
         textGender = (TextView) findViewById(R.id.genderTextViewInfo);
